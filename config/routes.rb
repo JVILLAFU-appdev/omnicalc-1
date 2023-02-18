@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   get("/random/new", {:controller => "application", :action => "random_form"})
 
+  get("/square/results", {:controller => "application", :action => "square_results"})
+  
 end

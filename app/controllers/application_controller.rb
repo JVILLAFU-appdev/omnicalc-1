@@ -20,4 +20,15 @@ class ApplicationController < ActionController::Base
     render({:template =>"calculation_templates/random_form.html.erb"})
   end
 
+  def square_results
+    
+    #Params: {"input"=>"45"}
+
+    @num = params.fetch("input").to_i
+    
+    @square_of_num = @num * @num
+    
+    render({:template =>"calculation_templates/square_results.html.erb"})
+  end
+
 end
